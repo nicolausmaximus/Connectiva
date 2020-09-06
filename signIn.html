@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Connectiva</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="index.css">
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+	<script src="form.js"></script>
+</head>
+
+<body>
+
+	<div class="topnav">
+		<a href="index.html"><img src="logo.png" class="logo"></img></a>
+		<div class="topnav-right">
+			<a href="join-meeting.html">JOIN A MEETING</a>
+			<a href="signIn.html">CREATE A MEETING</a>
+			<button class="signUpHome" onclick="location.href= 'signIn.html';">SIGN IN</button>
+			<button class="signUpHome" onclick="location.href= 'signUp.html';">SIGN UP, IT'S FREE</button>
+		</div>
+    </div>
+    <hr id="header-hr">
+
+    <div class="modal-content animate">
+        <div class="imgcontainer">
+           
+            <img src="avatar.jpg"
+                alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="email2" required>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="password2" required>
+
+            <button onclick="signIn()" type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label><br>
+
+            <button  onclick="location.href='signUp.html'" style="background-color:rgb(255, 115, 0) ;">NOT SIGNED UP, SIGN UP HERE</button>
+            
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -9,7 +9,6 @@
 
   const auth = firebase.auth(); 
 
-
   function signUp(){
   
   var email = document.getElementById("email");
@@ -32,23 +31,16 @@
   //Takes user to different page
 }
 
-
- 
- auth.onAuthStateChanged(function(user){
+auth.onAuthStateChanged(function(user){
   
   if(user){
    
    var email = user.email;
-   //alert("current user:" + user.email)
-
-   window.location = "form2.html";
+  
+   window.location = "home.html";
    
    //Take user to a different or home page
 
    //is signed in
-   
-  }
-  
-  
-  
- });
+   }
+});
