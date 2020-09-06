@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Connectiva</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="meeting-creation.css">
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+        <script src="form.js"></script>
+        
+    </head>
+    
+    <body>
+        <div class="topnav">
+            <a href="index.html"><img src="logo.png" class="logo"></img></a>
+            <div class="topnav-right">
+                <a href="join-meeting.html">JOIN A MEETING</a>
+                <a href="signIn.html">CREATE A MEETING</a>
+                <button class="signUpHome" onclick="location.href= 'signIn.html';">SIGN IN</button>
+                <button class="signUpHome" onclick="location.href= 'signUp.html';">SIGN UP, IT'S FREE</button>
+            </div>
+        </div>
+
+        <hr id="header-hr">
+
+        <div id="form-cont">
+            <div id="form-box">
+                <label style="font-size: 40px;">Join  a Meeting</label><br><br>
+                <input type=text id="channel-name" style="border-radius: 10px; text-align: center; font-size: 25px;" placeholder="Enter Channel Name"><br><br>
+                <input type=text id="unknown-username" placeholder="Enter Your Name" style="border-radius: 10px; text-align: center; font-size: 20px;"><br><br>
+                <label>Audio </label>
+                <input type="checkbox" id="audio">
+                <label>Video </label>
+                <input type="checkbox" id="video"><br><br>
+                <button onclick="" style="border-radius: 10px; ">Join Meeting</button>
+             </div>
+        </div>
+        
+        <div class="footer"></div>
+    </body>
+</html>
