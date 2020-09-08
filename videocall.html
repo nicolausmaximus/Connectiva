@@ -26,7 +26,8 @@
 					</button>
 				</div>
 				<div class="col-md-2 text-center">
-					<button id="exit-btn" type="button" class="btn btn-block btn-danger btn-lg">
+					<button id="exit-btn" onclick="location.href= 'index.html';" type="button"
+						class="btn btn-block btn-danger btn-lg">
 						<i id="exit-icon" class="fas fa-phone-slash"></i>
 					</button>
 				</div>
@@ -49,7 +50,8 @@
 						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 						<form class="modal-content" action="">
 						  <div class="container listlist">
-						    
+							<h1>List</h1> 
+							<div id="data_username"></div>
 						  </div>
 						</form>
 					</div>
@@ -277,11 +279,17 @@
 	<!-- Modal -->
 	
 </body>
+<script src="username.js"></script>
 <script src="AgoraRTCSDK-3.1.1.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="videocall.css" />
+<link rel="stylesheet" href="username.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="agora-interface.js"></script>
+<script src="ui.js"></script>
+<script src="https://spreadsheets.google.com/feeds/cells/1HAz57NDJceUDNL17eUxgvNDwmtp63-1aXS2pj0t6B1w/1/public/values?alt=json-in-script&callback=doData"></script>
 <script type="text/javascript">
 	$("#mic-btn").prop("disabled", true);
 	$("#video-btn").prop("disabled", true);
@@ -290,19 +298,13 @@
 
 	
 	var modal = document.getElementById('id01');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-<script src="agora-interface.js"></script>
-<script src="ui.js"></script>
-<script>
-	
+	window.onclick = function(event) {
+ 	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+	}
 </script>
 
-<link rel="stylesheet" type="text/css" href="videocall.css" />
 
 
 </html>

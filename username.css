@@ -1,0 +1,38 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  border: 1px solid;
+  padding: 5px;
+  box-shadow: 3px 5px #8888887d;
+}
+tr.head th,
+tr.head td {
+  background-color: #ededed;
+  border-bottom: 4px double black;
+}
+span.linetitle {
+  font-weight: bold;
+}
+div.lineclass {
+  font-style: italic;
+}
+.title,
+.result {
+  width: 80%;
+}
+.notes {
+  width: 15%;
+}
+h1 {
+  text-align: center;
+}
+body {
+  margin: 12px;
+  font-size: 12px;
+}
