@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="meeting-creation.css">
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+        <script src="/__/firebase/7.19.1/firebase-firestore.js"></script>
         <script src="form.js"></script>
 
         
@@ -29,12 +31,12 @@
             <div id="form-box">
                 <label style="font-size: 40px;">Join  a Meeting</label><br><br>
                 <input type=text id="channel-name" style="border-radius: 10px; text-align: center; font-size: 25px;" placeholder="Enter Channel Name"><br><br>
-                <input type=text id="unknown-username" placeholder="Enter Your Name" style="border-radius: 10px; text-align: center; font-size: 20px;"><br><br>
+                <input type=text id="unknownUser" placeholder="Enter Your Name" style="border-radius: 10px; text-align: center; font-size: 20px;"><br><br>
                 <label>Audio </label>
                 <input type="checkbox" id="audio">
                 <label>Video </label>
                 <input type="checkbox" id="video"><br><br>
-                <button id="join-meeting_1" style="border-radius: 10px; ">Join Meeting</button>
+                <button id="join-meeting_1" onclick="firebaseinit()" style="border-radius: 10px; ">Join Meeting</button>
              </div>
         </div>
         
@@ -43,4 +45,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="join-meeting.js"></script>
+    <script src="agora-interface.js"></script>
 </html>
