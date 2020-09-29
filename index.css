@@ -426,7 +426,7 @@ span.psw {
 
 
 .footer {
-  background-color: #ff8000;
+  background-color: #ff8000d9;
   color: white;
   padding-bottom: 1px;
   line-height: 1.5;
@@ -499,7 +499,6 @@ span.psw {
 }
 
 .fa-envelope{
-  background-color: #ff8000;
   color: white;
   font-size: 15px;
 }
@@ -513,7 +512,6 @@ span.psw {
 }
 
 .fa-facebook {
-  background-color: #ff8000;
   border: 1.5px #ffffff solid;
 }
 
@@ -522,7 +520,6 @@ span.psw {
 }
 
 .fa-twitter {
-  background-color: #ff8000;
   border: 1.5px #ffffff solid;
 }
 
@@ -532,7 +529,6 @@ span.psw {
 
 .fa-github{
   border: 1.5px #ffffff solid;
-  background-color: #ff8000;
 }
 
 .fa-github:hover{
@@ -541,7 +537,7 @@ span.psw {
 
 .fa-linkedin{  
   border: 1.5px #ffffff solid;
-  background-color: #ff8000;
+
 }
 
 .fa-linkedin:hover{
@@ -550,7 +546,6 @@ span.psw {
 
 .fa-instagram {
   border: 1.5px #ffffff solid;
-  background-color: #ff8000;
 }
 
 .fa-instagram:hover{
@@ -563,7 +558,6 @@ span.psw {
   margin-top: 10px;
   margin-left: 0px;
   padding-left: 0px;
-  background-color: #ff8000;
   float: left;
 }
 
@@ -587,7 +581,6 @@ span.psw {
   margin-top: 15px;
   padding-right: 30px;
   font-size: 12px;
-  background-color: #ff8000;
   color: white;
 }
 
