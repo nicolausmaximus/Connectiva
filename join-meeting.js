@@ -17,4 +17,3 @@ $("#join-meeting_1").click(function (event) {
   });
 });
 
-

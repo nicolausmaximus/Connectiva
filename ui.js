@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   var agoraAppId = 'c4762b14fa5c4cfb8fd48e16ace2258d';
   var channelName = sessionStorage["xyz"];
@@ -269,4 +268,3 @@ function addExternalTransmitionMiniView(rtmpUrl){
   });
 
 }
-

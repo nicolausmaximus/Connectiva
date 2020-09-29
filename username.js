@@ -47,4 +47,3 @@ function readData(parent) {
     }
     drawRow(table, rowData);
 }
-
