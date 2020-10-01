@@ -8,6 +8,8 @@
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
         <script src="home.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="serialiseobject.js"></script>  
         
     </head>
 
@@ -25,16 +27,18 @@
 
         <div id="form-cont">
             <div id="form-box">
+                <form id="fill-form" method="POST" action="videocall.html">
                 <label style="font-size: 40px;">Create  a Meeting</label><br><br>
-                <input type=text id="channel-name" style="border-radius: 10px; text-align: center; font-size: 25px;" placeholder="Enter Channel Name"><br><br>
+                <input type=text id="channel-name" name="Channel name" style="border-radius: 10px; text-align: center; font-size: 25px;" placeholder="Enter Channel Name"><br><br>
+                <input type=text id="unknownUser" name="name" style="display: none; width: 0%; height: 0%;">
                 <label>Allow Unregistered User's to Join</label>
-                <input type="checkbox"><br><br>
+                <input type="checkbox" id="allow_unreg_user_to_join"><br><br>
                 <label>Audio on Start</label>
                 <input type="checkbox" id="audio">&nbsp;
                 <label>Video on Start</label>
                 <input type="checkbox" id="video"><br><br>
-                <button onclick="" style="border-radius: 10px; ">Start Meeting</button>
-
+                <button id="join-meeting_1" style="border-radius: 10px; ">Start Meeting</button>
+            </form>
             </div>
         </div>
         
@@ -90,4 +94,6 @@
         </div>
         
     </body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="join-meeting-users.js"></script>
 </html>

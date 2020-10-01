@@ -1,6 +1,7 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
 
+
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -23,6 +24,7 @@ auth.onAuthStateChanged(function(user){
 if(user){
  var email = user.email;
  document.getElementById("userId").innerHTML = "Current user:" +email;
+ sessionStorage["email"]=email;
  //Take user to a different or home page
 
  //is signed in
