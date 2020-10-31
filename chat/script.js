@@ -3,7 +3,7 @@ const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
-const name = sessionStorage["username"]
+const name = sessionStorage["username_user"]
 appendMessage('You joined',2)
 socket.emit('new-user', name)
 
@@ -33,12 +33,12 @@ function appendMessage(message,number=0) {
   messageElement.innerText = message
   messageContainer.append(messageElement)
   if(number==1){
-          messageElement.setAttribute("style", "margin-left: 70%; color:#fff; background-color: rgb(42 164 250 / 68%);  height: auto; padding: 10px; border-radius: 12px 12px 0 12px; ");
+          messageElement.setAttribute("style", "margin-left: 50%; color:#fff; float:right; background-color: rgb(42 164 250 / 68%);  height: auto; padding: 10px; border-radius: 12px 12px 0 12px; ");
 }
 if(number==2){
         messageElement.setAttribute("style", "  background-color: #ff80009e;     text-align: center;");
 }
 if(number==3){
-  messageElement.setAttribute("style", "  background-color: #7392d6;   margin-right: 70%;   height: auto; padding: 10px; border-radius: 12px 12px 12px 0;");
+  messageElement.setAttribute("style", "  background-color: #7392d6;   margin-right: 50%;  float:left; height: auto; padding: 10px; border-radius: 12px 12px 12px 0;");
 }
 }

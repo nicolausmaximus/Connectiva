@@ -4,6 +4,10 @@
   width: 100vw;
 }
 
+body{
+  margin: 0px !important;
+}
+
 #buttons-container div {
   max-width: 250px;
   min-width: 150px;

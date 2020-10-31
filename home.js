@@ -51,6 +51,7 @@ var language_label = document.getElementById("language_label");
  auth.onAuthStateChanged(function(user){
   var email = user.email;
   document.getElementById("userId").innerHTML = "Current user:" +email;
+  sessionStorage["username_user"]=email;
   
   if(user){
    
@@ -100,7 +101,9 @@ function profileSubmit(){
 
 
   });
-
+  alert("Profile updated successfully")
+  window.location.href="profile.html";
+  
 }
 
 function profileUpdate(){
@@ -121,4 +124,5 @@ function profileUpdate(){
   rootRef.child(userId).update(newData);
 
   }
+
 

@@ -9,7 +9,7 @@ $("#join-meeting_1").click(function (event) {
   sessionStorage["audio"] = audio;
   var video = document.getElementById("video").checked;
   sessionStorage["video"] = video;
-  document.getElementById("unknownUser").defaultValue = sessionStorage["email"];
+  document.getElementById("unknownUser").defaultValue = sessionStorage["username_user"];
   var jqxhr = $.ajax({
     url: "https://script.google.com/macros/s/AKfycbxEilqsFj6S3pjAYPUU0hvZbaHRwyfXOXn6535kyDXlCgO9-V4/exec",
     method: "GET",

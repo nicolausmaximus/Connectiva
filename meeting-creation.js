@@ -12,7 +12,7 @@ $("#join-meeting_1").click(function (event) {
   sessionStorage["video"] = video;
   var allow_unreg_user_to_join = document.getElementById("allow_unreg_user_to_join").checked;
   sessionStorage["allow_unreg_user_to_join"] = allow_unreg_user_to_join;
-  document.getElementById("unknownUser").defaultValue = sessionStorage["email"];
+  document.getElementById("unknownUser").defaultValue = sessionStorage["username_user"];
   var jqxhr = $.ajax({
     url: "https://script.google.com/macros/s/AKfycbxEilqsFj6S3pjAYPUU0hvZbaHRwyfXOXn6535kyDXlCgO9-V4/exec",
     method: "GET",
