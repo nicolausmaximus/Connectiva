@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Connectiva</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
+	
+</head>
+
+<body>
+
+
+    <div class="topnav">
+        <a href="home.html"><img src="logo.png" class="logo"></img></a>
+        <div class="topnav-right">
+            <a href="join-meeting-users.html">JOIN A MEETING</a>
+            <a href="meeting-creation.html">CREATE A MEETING</a>
+            <a href="profile.html"><label id="userId">Welcome </label></a>
+            <button class="signUpHome" onclick="signOut()" style="width: auto;">Sign Out</button>
+        </div>
+    </div>
+        
+    <hr id="header-hr">
+
+    <div class="modal-content">
+        <div class="container">
+            <h1>Edit User Profile</h1><br>
+                <div id="form-contents">
+                    <label>Profile Picture</label><br>
+                <center><img src="avatar.jpg"
+                    alt="Avatar" class="avatar"><br>
+                    <input type="file" onchange='chooseFile(event)'><br></center>
+               
+                    <label>First Name</label>
+                    <input type="text" id="first_name"><br>
+            
+                    <label>Last Name</label>
+                    <input type="text" id="last_name"><br>
+
+            
+                    <label>Phone Number</label>
+                    <input type="text" id="phone"><br>
+            
+                    <label>Address</label><br>
+                    <textarea id="address"></textarea><br>
+            
+                    <label>Language</label>
+                    <input type="text" id="language"><br>
+
+                    <label>Password</label>
+                    <input type="text" id="password_change"><br>
+
+                    </div>
+     
+
+        <div class="profile_button">
+            <button type="button" class="signupbtn" onclick="profileSubmit()">Submit</button><br>
+            <button type="button" class="signupbtn" onclick="profileUpdate()" style="background-color: blue;">Update</button><br>
+            <button type="button" class="cancelbtn" onclick="location.href='profile.html'">Cancel</button><br>
+        </div>
+
+        </div>
+        
+        
+
+
+        
+    </div>
+
+
+
+
+
+    <div class="footer">
+        <div class="ft-main">
+            <div class="ft-main-content">
+                <h2 class="ft-content-heading">About</h2>
+                <ul class="ft-list">
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Why us</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </div>
+            <div class="ft-main-content">
+                <h2 class="ft-content-heading">Support</h2>
+                <ul class="ft-list">
+                    <li><a href="#">Feedback/Suggestions</a></li>
+                    <li><a href="#">Quickstart Guides</a></li>
+                    <li><a href="#">Complaint</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="ft-main-content">
+                <h2 class="ft-content-heading">Contact Us</h2>
+                <p>
+                    <span class="fa fa-envelope">&nbsp;&nbsp;<a href="mailto:connectiva.help@gmail.com">connectiva.help@gmail.com</a></span><br>
+                    <span class="fa fa-envelope">&nbsp;&nbsp;<a href="mailto:admin.connectiva@gmail.com">admin.connectiva@gmail.com</a></span><br>
+                    &emsp14;  &phone; <a href="tel:+91-923-874-3184">+91 923 874 3184</a>
+                </p>
+            </div>
+        </div>
+        <div class="ft-social-media">
+            <ul class="ft-media-logos ft-list">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-github"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+            </ul>
+        </div>
+        <div class="ft-legal">
+            <ul class="ft-legal-items ft-list">
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="ft-copy-right-legal">
+            <ul class="ft-legal-items ft-list">
+            <li>&copy; 2020 Connectiva, All rights reserved</li>
+            </ul>
+        </div>
+    </div>
+    <script src="home.js"></script>
+   
+</body>
+</html>

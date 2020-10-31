@@ -7,8 +7,11 @@
         <link rel="stylesheet" href="meeting-creation.css">
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-database.js"></script>
         <script src="home.js"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="serialiseobject.js"></script>        
     </head>
 
     <body>
@@ -17,7 +20,7 @@
             <div class="topnav-right">
                 <a href="join-meeting-users.html">JOIN A MEETING</a>
                 <a href="meeting-creation.html">CREATE A MEETING</a>
-                <a id="userId">Welcome </a>
+                <a href="profile.html"><label id="userId">Welcome </label></a>
                 <button class="signUpHome" onclick="signOut()" style="width: auto;">Sign Out</button>
             </div>
         </div>
@@ -25,21 +28,72 @@
 
         <div id="form-cont">
             <div id="form-box">
-                <label style="font-size: 40px;">Join  a Meeting</label><br><br>
-                <input type=text id="channel-name" style="border-radius: 10px; text-align: center; font-size: 25px;" placeholder="Enter Channel Name"><br><br>
-                <label>Audio </label>
-                <input type="checkbox" id="audio">
-                <label>Video </label>
-                <input type="checkbox" id="video"><br><br>
-                <button onclick="location.href= 'videocall.html';" style="border-radius: 10px; ">Join Meeting</button>
-
+                <form id="fill-form" method="POST" action="videocall.html">
+                    <label style="font-size: 40px;">Join  a Meeting</label><br><br>
+                    <input type=text id="channel-name" name="Channel name" style="border-radius: 10px; text-align: center; font-size: 25px;" placeholder="Enter Channel Name"><br><br>
+                    <input type=text id="unknownUser" name="name" placeholder="Enter Your Name" style="display: none; width: 0%; height: 0%;">
+                    <label>Audio </label>
+                    <input type="checkbox" id="audio">
+                    <label>Video </label>
+                    <input type="checkbox" id="video"><br><br>
+                    <button id="join-meeting_1" style="border-radius: 10px; ">Join Meeting</button>
+                </form>
             </div>
         </div>
-        
         <div class="footer">
-    
+            <div class="ft-main">
+                <div class="ft-main-content">
+                    <h2 class="ft-content-heading">About</h2>
+                    <ul class="ft-list">
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Why us</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-content">
+                    <h2 class="ft-content-heading">Support</h2>
+                    <ul class="ft-list">
+                        <li><a href="#">Feedback/Suggestions</a></li>
+                        <li><a href="#">Quickstart Guides</a></li>
+                        <li><a href="#">Complaint</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                    </ul>
+                </div>
+                <div class="ft-main-content">
+                    <h2 class="ft-content-heading">Contact Us</h2>
+                    <p>
+                        <span class="fa fa-envelope">&nbsp;&nbsp;<a href="mailto:connectiva.help@gmail.com">connectiva.help@gmail.com</a></span><br>
+                        <span class="fa fa-envelope">&nbsp;&nbsp;<a href="mailto:admin.connectiva@gmail.com">admin.connectiva@gmail.com</a></span><br>
+                        &emsp14;  &phone; <a href="tel:+91-923-874-3184">+91 923 874 3184</a>
+                    </p>
+                </div>
+            </div>
+            <div class="ft-social-media">
+                <ul class="ft-media-logos ft-list">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-github"></a></li>
+                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                </ul>
+            </div>
+            <div class="ft-legal">
+                <ul class="ft-legal-items ft-list">
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="ft-copy-right-legal">
+                <ul class="ft-legal-items ft-list">
+                <li>&copy; 2020 Connectiva, All rights reserved</li>
+                </ul>
+            </div>
         </div>
 
         
     </body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="join-meeting-users.js"></script>
+
 </html>

@@ -1,12 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 body {font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 /*min-width: 800px !important;*/}
-* {box-sizing: border-box;}
+* {box-sizing: border-box;
+  font-family: verdana, sans-serif;
+  margin: 0; 
+  padding: 0;
+}
 
 .topnav {
   overflow: hidden;
   margin: 5px 10px 0px;
   min-width: 800px !important;
+  width: 98%;
+  z-index: 1;
+  background-color: white;
+  border-bottom: 2px #f1f1f1 solid;
+}
 
+
+div.topnav{
+  position: sticky;
+  top: 0;
 }
 
 .topnav a {
@@ -21,7 +40,7 @@ body {font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav-right {
-  float: right;
+  float: right
 }
 
 
@@ -73,17 +92,6 @@ body {font-family: Arial, Helvetica, sans-serif;
   border-color: #ff8000;
 }
 
-.footer{
-   display: block;
-  width: 100%;
-  height: 400px;
-
-   left: 0;
-   bottom: 0;
-   width: 100%;
-
-  background-color: #f7b572;
-}
 
 
 * {box-sizing: border-box}
@@ -242,6 +250,7 @@ button:hover {
   width: 50%;
 }
 
+
 /* Add padding to container elements */
 .container {
   padding: 16px;
@@ -263,12 +272,7 @@ hr {
   display: table;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 700px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
-}
+
 
 .imgcontainer {
   text-align: center;
@@ -343,8 +347,18 @@ span.psw {
   background-color: #f44336;
 }
 
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 1000px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+  .container{
+    justify-content: space-around;
+  }
+}
+
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   span.psw {
      display: block;
      float: right;
@@ -370,21 +384,312 @@ span.psw {
 
 /* Meeting Creation Page */
 #form-cont{
-  height: 500px;
+  height: 400px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-right: 30%;
+  margin-left: 30%;
 }
 
 #form-box{
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-right: 30%;
-  margin-left: 30%;
   background-color: white;
   border-radius: 5px;
-  
+  height: 420px;
   padding: 30px;
   -webkit-box-shadow: 0 0 10px #ff8000;
   box-shadow: 0 0 10px #ff8000;
   color: #ff8000;
   font-size: 18px;
+}
+@media screen and (max-width: 1100px) {
+  #form-cont{
+    height: 400px;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: space-around;
+  }
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+
+
+/*footer*/
+
+
+.footer {
+  background-color: #ff8000d9;
+  color: white;
+  padding-bottom: 1px;
+  line-height: 1.5;
+}
+
+
+.ft-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.ft-content-heading {
+  color: #fff;
+  font-family: verdana, sans-serif;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.ft-main {
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ft-main-content{
+  padding: 20px;
+  min-width: 200px;
+}
+
+.ft-social-media {
+  padding: 0 20px 10px;
+}
+
+.ft-media-logos {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #ffffff solid; 
+  padding-top: 20px;
+}
+
+.ft-media-logos li {
+  margin: 8px;
+  font-size: 20px;
+}
+
+.ft-social-media a:hover{
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.fa {
+  padding: 10px;
+  border-radius: 20%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 1px;
+}
+
+.fa-envelope{
+  color: white;
+  font-size: 15px;
+}
+
+.fa:hover{
+  margin: 1px;
+  padding: 10px;
+  transition: 0.3s smooth;
+  border: none;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  border: 1.5px #ffffff solid;
+}
+
+.fa-facebook:hover {
+  background-color: #3d5b99;
+}
+
+.fa-twitter {
+  border: 1.5px #ffffff solid;
+}
+
+.fa-twitter:hover {
+  background-color: #00aced;
+}
+
+.fa-github{
+  border: 1.5px #ffffff solid;
+}
+
+.fa-github:hover{
+  background-color: #202b21;
+}
+
+.fa-linkedin{  
+  border: 1.5px #ffffff solid;
+
+}
+
+.fa-linkedin:hover{
+  background-color: #0b5c81;
+}
+
+.fa-instagram {
+  border: 1.5px #ffffff solid;
+}
+
+.fa-instagram:hover{
+  background-color:  rgb(214, 25, 0);
+}
+
+.ft-legal {
+  font-size: 10px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding-left: 0px;
+  float: left;
+}
+
+.ft-legal-items {
+  width: 100%;
+  display: flex;
+}
+
+.ft-legal-items li {
+  margin-top: 0px;
+  margin-left: 30px;
+  padding-bottom: 15px;
+}
+
+.ft-legal-items a{
+  font-size: 15px;
+}
+
+.ft-copy-right-legal{
+  float: right;
+  margin-top: 15px;
+  padding-right: 30px;
+  font-size: 12px;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .column{
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  
+@media screen and (min-width: 477px) {
+  .ft-main {
+      justify-content: space-around;
+  }
+}
+@media screen and (max-width: 1000px){
+  .column{
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1240px ) {
+  .ft-main {
+      justify-content: space-evenly;
+  }
+}
+
+
+.rate i, .rate i:hover ~ i {
+  color: #888;
+  font-size: 40px;
+  text-shadow: none;
+  transition: color 200ms;
+  text-shadow: 200ms;
+  transition-delay: 0;
+}
+.rate:hover i {
+  color: #fc0;
+  text-shadow: rgb(255, 174, 0) 0 0 20px;
+}
+.rate:hover i:nth-child(2) {
+  transition-delay: 30ms;
+}
+.rate:hover i:nth-child(3) {
+  transition-delay: 60ms;
+}
+.rate:hover i:nth-child(4) {
+  transition-delay: 90ms;
+}
+.rate:hover i:nth-child(5) {
+  transition-delay: 120ms;
+}
+.rate i {
+  cursor: pointer;
+  font-style: normal;
+  size: 30px;
+}
+.rate abbr{
+  text-decoration: none;
+}
+#feedback{
+width:100%;
+height:200px;
+resize: none;
+}    	
+@keyframes modal-animation { 
+from { 
+top: -100px; 
+opacity: 0; 
+} 
+to { 
+top: 0px; 
+      opacity: 1; 			
+  }     
+}
+@media screen and (max-width: 300px) {
+  .sendbtn{
+      width: 100%;
+  }
+}
+
+/* profile */
+.profile_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+textarea{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.profileCont{
+  text-align: left;
+  padding: 10px;
+}
+
+
+
+#address_label{
+  
+  white-space: pre-wrap;
+}
+
+.infolabel{
+  display: inline-block;
+  width: 350px;
 }

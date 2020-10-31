@@ -1,8 +1,9 @@
-
 $(document).ready(function () {
   var agoraAppId = 'c4762b14fa5c4cfb8fd48e16ace2258d';
   var channelName = sessionStorage["xyz"];
   initClientAndJoinChannel(agoraAppId, channelName);
+
+  readData($("#data_username"));
 });
 
 // UI buttons
@@ -267,4 +268,3 @@ function addExternalTransmitionMiniView(rtmpUrl){
   });
 
 }
-
