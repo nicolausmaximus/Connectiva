@@ -87,6 +87,8 @@ function chooseFile(e){
 function profileSubmit(){
   firebase.storage().ref('users/' + userId + '/profile.jpg').put(file).then(function(){
     console.log("sucessfully uploaded");
+    window.location.href="profile.html";
+    alert("Profile Successfully updated");
   }).catch(error => {
     console.log(error.message);
   });
@@ -101,8 +103,6 @@ function profileSubmit(){
 
 
   });
-  alert("Profile updated successfully")
-  window.location.href="profile.html";
   
 }
 

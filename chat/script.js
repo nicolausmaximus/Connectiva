@@ -36,7 +36,7 @@ function appendMessage(message,number=0) {
           messageElement.setAttribute("style", "margin-left: 50%; color:#fff; float:right; background-color: rgb(42 164 250 / 68%);  height: auto; padding: 10px; border-radius: 12px 12px 0 12px; ");
 }
 if(number==2){
-        messageElement.setAttribute("style", "  background-color: #ff80009e;     text-align: center;");
+        messageElement.setAttribute("style", "  background-color: #ff80009e;     text-align: center; width: 100%;  overflow:hidden;");
 }
 if(number==3){
   messageElement.setAttribute("style", "  background-color: #7392d6;   margin-right: 50%;  float:left; height: auto; padding: 10px; border-radius: 12px 12px 12px 0;");
